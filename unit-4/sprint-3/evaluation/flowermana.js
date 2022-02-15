@@ -4,15 +4,36 @@ function runProgram(input) {
    var line = 1;
    for (let i = 0; i < test; i++) {
         var [n, tar] = newInput[line].trim().split(" ").map(Number);
+        //console.log(tar);
         line++;
         var num = newInput[line].trim().split(" ").map(Number);
         line++;
+        //console.log(num);
         var count = 0;
         var ans = [];
-        for (let j = 0; j < n; j = j+2) {
-            if (num[j] == num[j+1]) {
-                
-            }
+        for (let j = 0; j < n; j++) {
+           if (num[j] == 0) {
+               if (ans[ans.length-1] == 0) {
+                   count++;
+                   ans.pop();
+               }
+               else{
+                   ans.pop()
+                   ans.push(num[j]);
+               }
+               //console.log(ans)
+           }
+           else{
+               ans.push(num[j]);
+               //console.log(ans);
+           }
+           //console.log(count);
+        }
+        if (count == tar) {
+            console.log("Yes");
+        }
+        else{
+            console.log("No");
         }
    }
    

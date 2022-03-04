@@ -1,0 +1,9 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.mid{
+  border: 2px solid silver;
+  text-align: center;
+  padding: 20px
+}

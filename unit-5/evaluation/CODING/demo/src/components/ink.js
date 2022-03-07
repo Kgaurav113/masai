@@ -1,23 +1,25 @@
 import React, { useState } from 'react'
 
-const  = () => {
-    const [counter, setCounter] = useState(13);
+const Inkpens = () => {
+    const [counter, setCounter] = useState(78);
   return (
     <div className="items">
-        <span>Books:</span>
+        <span>InkPens:</span>
         <button className="addInkpen" onClick={() =>{
             setCounter(counter+1)
         }}>
             +
         </button>
-        <button className="remBook" onClick={() =>{
-            setCounter(counter-1)
+        <button className="remInkpen" onClick={() =>{
+             if (counter > 0) {
+                setCounter(counter-1)
+            }
         }}>
             -
         </button>
-        <span className="totalBooks">{counter}</span>
+        <span className="totalInkpens">{counter}</span>
     </div>
   )
 }
 
-export default Books;
+export default Inkpens;

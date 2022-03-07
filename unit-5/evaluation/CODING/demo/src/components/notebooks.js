@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 
 const Notebooks = () => {
-    const [counter, setCounter] = useState(13);
+    const [counter, setCounter] = useState(44);
   return (
     <div className="items">
-        <span>Books:</span>
+        <span>NoteBooks:</span>
         <button className="addNotebook" onClick={() =>{
             setCounter(counter+1)
         }}>
             +
         </button>
         <button className="remNotebook" onClick={() =>{
-            setCounter(counter-1)
+            if (counter > 0) {
+                setCounter(counter-1)
+            }
         }}>
             -
         </button>

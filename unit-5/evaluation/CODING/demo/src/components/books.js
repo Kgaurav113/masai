@@ -11,7 +11,9 @@ const Books = () => {
             +
         </button>
         <button className="remBook" onClick={() =>{
-            setCounter(counter-1)
+            if (counter > 0) {
+                setCounter(counter-1)
+            }
         }}>
             -
         </button>

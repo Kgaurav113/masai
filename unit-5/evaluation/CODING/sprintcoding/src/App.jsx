@@ -1,45 +1,17 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import "./App.css";
+import { Rentals } from "./Components/Rentals/Rentals";
+import { AddHouse } from "./Components/AddHouse/AddHouse";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <button className="toggleForm">
+        {/* Show text Add House or Show Rentals based on state */}
+      </button>
+      {/* Show component based on state */}
+      <br />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

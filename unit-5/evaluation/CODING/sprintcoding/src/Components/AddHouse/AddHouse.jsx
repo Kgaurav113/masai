@@ -26,7 +26,7 @@ export const AddHouse = () => {
         <input checked={""} type="checkbox" className="married" />
         <br />
         <label>image</label>
-        <input value={""} type="text" className="image" required />
+        <input value={""} type="text" className="image"  />
         <br />
         <input className="submitBtn" type="submit" />
       </form>

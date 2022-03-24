@@ -1,14 +1,45 @@
 import "./Rentals.css";
+import  { useEffect, useState} from "react";
+import axios from "axios";
 
 export const Rentals = () => {
+  const [data, setData] = useState([])
+  useEffect(() =>{
+    getData()
+  },[]);
+
+  const getData = () => {
+    axios.get("https://localhost:8080/houses").then((res) =>{
+      setData(res.data);
+    })
+  }
+  const handleSort = (key, value = 1) =>{
+    if (value == 1) {
+      data.sort((a,b) => a[key] - b[key])
+      setData([...data])
+    }
+    else{
+      data.sort((a,b) => b[key] - a[key])
+      setData([...data])
+    } 
+      
+  }
   return (
     <div className="rentalContainer">
       <div className="sortingButtons">
         <button className="sortById">Sort by ID</button>
-        <button className="sortByRentAsc">Rent Low to high</button>
-        <button className="sortByRentDesc">Rent High to low</button>
-        <button className="sortByAreaAsc">Area Low to high</button>
-        <button className="sortByAreaDesc">Area High to Low</button>
+        <button className="sortByRentAsc" onClick={() =>{
+          handleSort("rent")
+        }}>Rent Low to high</button>
+        <button className="sortByRentDesc" onClick={() =>{
+          handleSort("rent", -1)
+        }}>Rent High to low</button>
+        <button className="sortByAreaAsc" onClick={() =>{
+          handleSort("areaCode")
+        }}>Area Low to high</button>
+        <button className="sortByAreaDesc" onClick={() =>{
+          handleSort("areaCode", -1)
+        }}>Area High to Low</button>
       </div>
       <input
         className="searchAddress"

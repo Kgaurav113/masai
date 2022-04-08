@@ -1,0 +1,72 @@
+
+
+.btn1{
+  color: white;
+  background-color: rgb(61, 167, 209);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+  font-size: large;
+}
+.btn2{
+  color: white;
+  background-color: rgb(141, 201, 224);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+  font-size: large;
+}
+.btn3{
+  color: white;
+  background-color: rgb(233, 138, 49);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+
+  font-size: large;
+}
+.btn4{
+  color: white;
+  background-color: rgb(163, 36, 13);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+ 
+  font-size: large;
+}
+.btn5{
+  color: white;
+  background-color: rgb(105, 196, 93);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+ 
+  font-size: large;
+}
+.btn6{
+  color: white;
+  background-color: rgb(18, 53, 129);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+  
+  font-size: large;
+}
+.btn7{
+  color: white;
+  background-color: rgb(212, 34, 189);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+  
+  font-size: large;
+}
+.btn8{
+  color: white;
+  background-color: rgb(90, 85, 17);
+  height: 30px;
+  width: 150px;
+  border-radius: 13px;
+  
+  font-size: large;
+}
